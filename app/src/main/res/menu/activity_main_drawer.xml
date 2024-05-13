@@ -10,20 +10,12 @@
             android:title="@string/menu_home" />
 
 
-        <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Taken orders" />
-
 
         <item
             android:id="@+id/places"
-            android:title="LOCATIONS">
+            android:title="categories">
             <menu>
-                <item
-                    android:id="@+id/AMMAN"
-                    android:icon="@drawable/ic_baseline_accessibility_24"
-                    android:title="Customer"></item>
+
                 <item
                     android:id="@+id/IRBID"
                     android:icon="@drawable/ic_baseline_accessibility_24"

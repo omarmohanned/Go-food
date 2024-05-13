@@ -54,7 +54,12 @@ public class settings extends AppCompatActivity {
         change_pass = findViewById(R.id.change_pass);
         get_phone = findViewById(R.id.get_phone);
 
+        change_pass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+            }
+        });
         firebaseAuth = FirebaseAuth.getInstance();
         databaseReference = FirebaseDatabase.getInstance().getReference();
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
