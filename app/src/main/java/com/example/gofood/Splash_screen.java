@@ -25,7 +25,7 @@ public class Splash_screen extends AppCompatActivity {
         delay.postDelayed(new Runnable() {
             @Override
             public void run() {
-                CountDownTimer a = new CountDownTimer(3000, 100) {
+                CountDownTimer a = new CountDownTimer(1000, 1000) {
                     @Override
                     public void onTick(long l) {
                        // Toast.makeText(getApplicationContext(),"test"+l,Toast.LENGTH_LONG).show();
@@ -41,7 +41,7 @@ public class Splash_screen extends AppCompatActivity {
 
 
             }
-        }, 3000);
+        }, 1000);
 
     }
 }

@@ -14,10 +14,6 @@
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_menu_gallery"
             android:title="Taken orders" />
-        <item
-            android:id="@+id/my_orders"
-            android:icon="@drawable/ic_baseline_shopping_basket_24"
-            android:title="resturants" />
 
 
         <item

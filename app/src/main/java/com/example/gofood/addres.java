@@ -104,10 +104,9 @@ item.setAdapter(adapter);
             public void onClick(View view) {
 
 
-                reference.child("allres").child(resname.getText().toString()).child("menu").child(item.getSelectedItem().toString()).setValue(item.getSelectedItem().toString());
-                reference.child("allres").child(resname.getText().toString()).child("menu").child(item.getSelectedItem().toString()).child(item.getSelectedItem().toString()).setValue(item.getSelectedItem().toString());
+                reference.child("allres").child(resname.getText().toString()).child(item.getSelectedItem().toString()).setValue(price.getText().toString());
+               // reference.child("allres").child(resname.getText().toString()).child(item.getSelectedItem().toString()).child("price").setValue(price.getText().toString());
 
-                reference.child("allres").child(resname.getText().toString()).child("menu").child(item.getSelectedItem().toString()).child("price").setValue(price.getText().toString());
 
             }
         });

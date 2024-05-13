@@ -103,27 +103,19 @@
             android:layout_gravity="center_vertical"
             android:orientation="horizontal">
 
-            <Spinner
-                android:id="@+id/item"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <Button
-                android:id="@+id/check"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="check price:" />
 
             <TextView
                 android:id="@+id/zinger"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:layout_marginLeft="15dp"
+                android:ems="10"
+                android:layout_gravity="center"
+                android:gravity="center"
                 android:textSize="20dp"
-                android:text="price" />
+                android:text="FOOD ORDER" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -152,7 +144,7 @@
                 android:layout_margin="25dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="Enter your phone number"
+                android:text="phone number"
                 android:textSize="15dp" />
         </LinearLayout>
         <LinearLayout
@@ -163,13 +155,13 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/order"
+                android:id="@+id/accept_order"
                 android:layout_width="265dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="50dp"
                 android:layout_weight="1"
-                android:text="order" />
+                android:text="accept" />
         </LinearLayout>
 
 

@@ -9,26 +9,16 @@ public class user {
     Double lat;
 
     Double lon;
-    String zinger;   String fahita;   String chicken;   String Matrix;
+
+    public String getPrice() {
+        return price;
+    }
+
+    String price;
+
 
     public String getPhone() {
         return phone;
-    }
-
-    public String getZinger() {
-        return zinger;
-    }
-
-    public String getFahita() {
-        return fahita;
-    }
-
-    public String getChicken() {
-        return chicken;
-    }
-
-    public String getMatrix() {
-        return Matrix;
     }
 
     public String getPlace() {

@@ -63,8 +63,6 @@ public class MainActivity2 extends AppCompatActivity {
                     startActivity(new Intent(getApplicationContext(), home.class));
                 } else if (itemid==R.id.nav_gallery) {
                     startActivity(new Intent(getApplicationContext(), taken_orders.class));
-                } else if (itemid==R.id.my_orders) {
-                    startActivity(new Intent(getApplicationContext(), addinforesturant.class));
                 }else if (itemid==R.id.AMMAN) {
                     startActivity(new Intent(getApplicationContext(), see_res.class));
                 }else if (itemid==R.id.IRBID) {
