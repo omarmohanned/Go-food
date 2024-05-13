@@ -116,15 +116,13 @@
                         android:text="Resturant items"
                         android:textSize="25dp" />
 
-                    <EditText
+                    <Spinner
                         android:id="@+id/item"
                         android:layout_width="350dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="50dp"
                         android:layout_gravity="center"
-
                         android:ems="10"
-                        android:hint="Item"
-                        android:inputType="text" />
+                        android:layout_margin="20dp"/>
 
                     <EditText
                         android:id="@+id/price"

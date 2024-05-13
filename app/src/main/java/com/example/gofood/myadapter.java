@@ -12,11 +12,20 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.ArrayList;
 
 public class myadapter extends RecyclerView.Adapter<myadapter.MyViewHolder> {
     Context context;
     ArrayList<user> list;
+    private DatabaseReference reference;
+    double lattitude,longitude;
+    private FirebaseAuth firebaseAuth, firebaseAuth1;
+    private FirebaseUser firebaseUser;
 
 
     public myadapter(Context context, ArrayList<user> list) {
@@ -33,19 +42,23 @@ public class myadapter extends RecyclerView.Adapter<myadapter.MyViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull myadapter.MyViewHolder holder, int position) {
+        firebaseAuth1 = FirebaseAuth.getInstance();
+        FirebaseUser currentUser = firebaseAuth.getCurrentUser();
+        reference = FirebaseDatabase.getInstance().getReference();
         user user=list.get(position);
         holder.firstname.setText(user.getResname());
         holder.lastname.setText(user.getPhone());
         holder.age.setText(user.getPlace());
+        holder.order.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
 
 
-        holder.option.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(context, options.class);
-                context.startActivity(intent);
-            }
-        });
+
+        }
+});
+
+
 
     }
 
@@ -57,14 +70,13 @@ public class myadapter extends RecyclerView.Adapter<myadapter.MyViewHolder> {
     public static class MyViewHolder extends RecyclerView.ViewHolder {
 
 TextView firstname,lastname,age;
-Button option;
+Button order;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             firstname=itemView.findViewById(R.id.tvfirstname);
             lastname=itemView.findViewById(R.id.tvlastname);
             age=itemView.findViewById(R.id.tvage);
-
-            option=itemView.findViewById(R.id.option);
+            order=itemView.findViewById(R.id.order);
 
 
         }

@@ -12,8 +12,10 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Looper;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -35,13 +37,15 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
 
 public class addres extends AppCompatActivity {
     private static final int REQUEST_CODE_LOCATION_PERMISSION = 1;
     private DatabaseReference reference;
-    private EditText resname, item, price, place, phone;
+    private EditText resname, price, place, phone;
+    private Spinner item;
     private Button location, additem, add;
     private TextView textlatlang;
     double lattitude,longitude;
@@ -54,6 +58,8 @@ public class addres extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_addres);
 
+
+
         reference = FirebaseDatabase.getInstance().getReference();
 
         additem = findViewById(R.id.additem);
@@ -65,6 +71,13 @@ public class addres extends AppCompatActivity {
         price = findViewById(R.id.price);
         location = findViewById(R.id.location);
         add = findViewById(R.id.add);
+
+        List<String> foods= Arrays.asList("zinger","fahita","chicken","Matrix");
+
+
+        ArrayAdapter adapter=new ArrayAdapter(getApplicationContext(), android.R.layout.simple_spinner_item,foods);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+item.setAdapter(adapter);
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -91,9 +104,10 @@ public class addres extends AppCompatActivity {
             public void onClick(View view) {
 
 
-                reference.child("allres").child(resname.getText().toString()).child(item.getText().toString()).setValue(item.getText().toString());
+                reference.child("allres").child(resname.getText().toString()).child("menu").child(item.getSelectedItem().toString()).setValue(item.getSelectedItem().toString());
+                reference.child("allres").child(resname.getText().toString()).child("menu").child(item.getSelectedItem().toString()).child(item.getSelectedItem().toString()).setValue(item.getSelectedItem().toString());
 
-                reference.child("allres").child(resname.getText().toString()).child(item.getText().toString()).child("price").setValue(price.getText().toString());
+                reference.child("allres").child(resname.getText().toString()).child("menu").child(item.getSelectedItem().toString()).child("price").setValue(price.getText().toString());
 
             }
         });

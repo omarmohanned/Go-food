@@ -103,15 +103,141 @@
             android:layout_gravity="center_vertical"
             android:orientation="horizontal">
 
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="zinger:     "
+                android:textColor="@color/black"
+                android:textSize="26dp"
+                android:textStyle="bold"
+
+                />
+
+            <TextView
+                android:id="@+id/zinger"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginLeft="15dp"
+                android:textSize="20dp"
+                android:text="place" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="faheta:     "
+                android:textColor="@color/black"
+                android:textSize="26dp"
+                android:textStyle="bold"
+
+                />
+
+            <TextView
+                android:id="@+id/fahita"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginLeft="15dp"
+                android:textSize="20dp"
+                android:text="place" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="chicken and rice:     "
+                android:textColor="@color/black"
+                android:textSize="26dp"
+                android:textStyle="bold"
+
+                />
+
+            <TextView
+                android:id="@+id/chi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginLeft="15dp"
+                android:textSize="20dp"
+                android:text="place" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="matrix:     "
+                android:textColor="@color/black"
+                android:textSize="26dp"
+                android:textStyle="bold"
+
+                />
+
+            <TextView
+                android:id="@+id/matrix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginLeft="15dp"
+                android:textSize="20dp"
+                android:text="place" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine3"
+                android:layout_width="350dp"
+                android:layout_height="250dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
             <Button
-                android:id="@+id/option"
+                android:id="@+id/order"
                 android:layout_width="265dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="50dp"
                 android:layout_weight="1"
-                android:text="See options" />
+                android:text="order" />
         </LinearLayout>
 
+
     </LinearLayout>
+
 </androidx.cardview.widget.CardView>
