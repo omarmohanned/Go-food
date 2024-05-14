@@ -4,13 +4,9 @@ public class orderss {
     String comments,food,phone,phone_num,place,restaurantname;
     Double lat,lon;
 
-    public String getComments() {
-        return comments;
-    }
+   
 
-    public String getFood() {
-        return food;
-    }
+  
 
     public String getPhone() {
         return phone;
