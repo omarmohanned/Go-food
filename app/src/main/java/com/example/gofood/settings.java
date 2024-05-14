@@ -77,29 +77,8 @@ public class settings extends AppCompatActivity {
 
             }
         });
-        databaseReference.child(firebaseUser.getUid()).child("email").addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                get_email.setText( dataSnapshot.getValue(String.class));
-                email = dataSnapshot.getValue(String.class);
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-        databaseReference.child(firebaseUser.getUid()).child("phone").addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                get_phone.setText( dataSnapshot.getValue(String.class));
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
+      
+  
 
     }
 }
