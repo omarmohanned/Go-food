@@ -38,6 +38,8 @@ public class myadapter extends RecyclerView.Adapter<myadapter.MyViewHolder> {
     private FirebaseAuth firebaseAuth, firebaseAuth1;
     private FirebaseUser firebaseUser;
 
+    public myadapter() {
+    }
 
     public myadapter(Context context, ArrayList<user> list) {
         this.context = context;
@@ -59,7 +61,7 @@ public class myadapter extends RecyclerView.Adapter<myadapter.MyViewHolder> {
         holder.lastname.setText(user.getPhone());
         holder.age.setText(user.getPlace());
 
-        List<String> foods= Arrays.asList("zinger","fahita","chicken","Matrix");
+        List<String> foods= Arrays.asList("zinger","fahita","chicken","Matrix","shwerma");
         reference = FirebaseDatabase.getInstance().getReference();
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         assert firebaseUser != null;
@@ -72,7 +74,8 @@ public class myadapter extends RecyclerView.Adapter<myadapter.MyViewHolder> {
                 String items= holder.item.getSelectedItem().toString();
                 databaseReference1= FirebaseDatabase.getInstance().getReference();
                 Toast.makeText(context,items,Toast.LENGTH_LONG).show();
-                databaseReference1.child("allres").child(user.getPlace()).child(items).addValueEventListener(new ValueEventListener() {
+                databaseReference1.child("allres").child(user.getResname()).child(holder.item.getSelectedItem().toString())
+                        .addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                        holder.zinger.setText( dataSnapshot.getValue(String.class));
@@ -140,10 +143,10 @@ builder.show();
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
 
-TextView firstname,lastname,age,zinger;
-Button order,check;
-Spinner item;
-EditText comments,phone_number;
+        TextView firstname,lastname,age,zinger;
+          Button order,check;
+          Spinner item;
+          EditText comments,phone_number;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);

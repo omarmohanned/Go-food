@@ -19,7 +19,7 @@
                 <item
                     android:id="@+id/IRBID"
                     android:icon="@drawable/ic_baseline_accessibility_24"
-                    android:title="Driver"></item>
+                    android:title="All Drivers"></item>
                 <item
                     android:id="@+id/aqaba"
                     android:icon="@drawable/ic_baseline_accessibility_24"

@@ -72,12 +72,12 @@ public class addres extends AppCompatActivity {
         location = findViewById(R.id.location);
         add = findViewById(R.id.add);
 
-        List<String> foods= Arrays.asList("zinger","fahita","chicken","Matrix");
+        List<String> foods= Arrays.asList("zinger","fahita","chicken","Matrix","shwerma");
 
 
         ArrayAdapter adapter=new ArrayAdapter(getApplicationContext(), android.R.layout.simple_spinner_item,foods);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-item.setAdapter(adapter);
+        item.setAdapter(adapter);
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -88,12 +88,10 @@ item.setAdapter(adapter);
 
                 } else {
                     reference.child("allresallplace").child(resname.getText().toString()).setValue(resname.getText().toString());
-
                     reference.child("allres").child(resname.getText().toString()).setValue(resname.getText().toString());
                     reference.child("allres").child(resname.getText().toString()).child("resname").setValue(resname.getText().toString());
                     reference.child("allres").child(resname.getText().toString()).child("lon").setValue(lattitude);
                     reference.child("allres").child(resname.getText().toString()).child("lat").setValue(longitude);
-
                     reference.child("allres").child(resname.getText().toString()).child("phone").setValue(phone.getText().toString());
                     reference.child("allres").child(resname.getText().toString()).child("place").setValue(place.getText().toString());
                 }

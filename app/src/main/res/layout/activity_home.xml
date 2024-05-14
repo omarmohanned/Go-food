@@ -11,7 +11,7 @@
         android:id="@+id/textView6"
         android:layout_width="239dp"
         android:layout_height="43dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="50dp"
         android:layout_marginBottom="31dp"
         android:gravity="center"
         android:text="All Avalabile resturants"

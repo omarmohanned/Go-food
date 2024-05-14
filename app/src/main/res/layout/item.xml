@@ -152,7 +152,7 @@
                 android:layout_margin="25dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="Enter your phone number"
+                android:hint="Enter your phone number"
                 android:textSize="15dp" />
         </LinearLayout>
         <LinearLayout

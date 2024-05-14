@@ -3,13 +3,9 @@ package com.example.gofood;
 public class user {
     String phone;
     String place;
-
     String resname;
-
     Double lat;
-
     Double lon;
-
     public String getPrice() {
         return price;
     }
