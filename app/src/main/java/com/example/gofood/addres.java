@@ -94,6 +94,7 @@ public class addres extends AppCompatActivity {
                     reference.child("allres").child(resname.getText().toString()).child("lat").setValue(longitude);
                     reference.child("allres").child(resname.getText().toString()).child("phone").setValue(phone.getText().toString());
                     reference.child("allres").child(resname.getText().toString()).child("place").setValue(place.getText().toString());
+                    reference.child("allres").child(resname.getText().toString()).child("place").setValue(place.getText().toString());
                 }
             }
         });
