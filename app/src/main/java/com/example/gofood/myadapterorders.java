@@ -3,6 +3,8 @@ package com.example.gofood;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,6 +29,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Locale;
 
 public class myadapterorders extends RecyclerView.Adapter<myadapterorders.MyViewHolder> {
     Context context;
@@ -56,9 +59,9 @@ public class myadapterorders extends RecyclerView.Adapter<myadapterorders.MyView
         holder.firstname.setText(user.getRestaurantname());
         holder.lastname.setText(user.getPhone());
         holder.age.setText(user.getPlace());
-        holder.comments.setText(user.getComments());
+        //holder.comments.setText(user.getComments());
         holder.phone_number.setText(user.getPhone_num());
-        holder.zinger.setText(user.getFood());
+        //holder.zinger.setText(user.getFood());
 
         List<String> foods= Arrays.asList("zinger","fahita","chicken","Matrix");
         reference = FirebaseDatabase.getInstance().getReference();
@@ -78,11 +81,16 @@ public class myadapterorders extends RecyclerView.Adapter<myadapterorders.MyView
                     reference.child(firebaseUser.getUid()).child("taken_orders").child("restaurantname").setValue(user.getRestaurantname());
                     reference.child(firebaseUser.getUid()).child("taken_orders").child("phone").setValue(user.getPhone());
                     reference.child(firebaseUser.getUid()).child("taken_orders").child("place").setValue(user.getPlace());
-                    reference.child(firebaseUser.getUid()).child("taken_orders").child("comments").setValue(user.getComments());
+                    //reference.child(firebaseUser.getUid()).child("taken_orders").child("comments").setValue(user.getComments());
                     reference.child(firebaseUser.getUid()).child("taken_orders").child("lat").setValue(user.getLat());
                     reference.child(firebaseUser.getUid()).child("taken_orders").child("lon").setValue(user.getLon());
                     reference.child(firebaseUser.getUid()).child("taken_orders").child("phone_num").setValue(user.getPhone_num());
                      /////////////////////////////////////////////
+
+                    String uri = String.format(Locale.ENGLISH, "geo:%f,%f", user.getLat(), user.getLon());
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
+                    context.startActivity(intent);
+
 
 
                 }

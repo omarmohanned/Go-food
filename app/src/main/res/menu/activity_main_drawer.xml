@@ -33,10 +33,6 @@
             android:title="SECONDERY">
             <menu>
                 <item
-                    android:id="@+id/tutorial"
-
-                    android:title="tutorial"></item>
-                <item
                     android:id="@+id/settings"
 
                     android:title="Settings"></item>

@@ -83,7 +83,7 @@ public class myadapterorders_taken extends RecyclerView.Adapter<myadapterorders_
                     reference.child("orders").child(longAsString).child("phone").setValue(user.getPhone());
                     reference.child("orders").child(longAsString).child("place").setValue(user.getPlace());
                     reference.child("orders").child(longAsString).child("food").setValue(holder.item.getSelectedItem().toString());
-                    reference.child("orders").child(longAsString).child("comments").setValue(holder.comments.getText().toString());
+                    //reference.child("orders").child(longAsString).child("comments").setValue(holder.comments.getText().toString());
                     reference.child("orders").child(longAsString).child("lat").setValue(user.getLat());
                     reference.child("orders").child(longAsString).child("lon").setValue(user.getLon());
                     reference.child("orders").child(longAsString).child("phone_num").setValue(holder.phone_number.getText().toString());

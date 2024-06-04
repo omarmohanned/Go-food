@@ -67,8 +67,6 @@ public class MainActivity2 extends AppCompatActivity {
                     startActivity(new Intent(getApplicationContext(), driver.class));
                 }else if (itemid==R.id.aqaba) {
                     startActivity(new Intent(getApplicationContext(), check_res.class));
-                }else if (itemid==R.id.tutorial) {
-                    startActivity(new Intent(getApplicationContext(), tutorial.class));
                 }else if (itemid==R.id.settings) {
                     startActivity(new Intent(getApplicationContext(), settings.class));
                 }else if (itemid==R.id.sign_out) {
