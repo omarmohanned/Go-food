@@ -41,6 +41,7 @@ dependencies {
     implementation libs.firebase.database
     implementation libs.lifecycle.livedata.ktx
     implementation libs.lifecycle.viewmodel.ktx
+    implementation libs.material
     implementation libs.navigation.fragment
     implementation libs.navigation.ui
     testImplementation libs.junit
